@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply min-h-screen flex items-center justify-center m-0 p-0 bg-slate-200;
+}
+
+#app {
+	@apply w-[92%] max-w-[900px] m-4 p-4 sm:p-8 rounded-md bg-white;
+	box-shadow:
+		0px 0px 1px rgba(3, 7, 18, 0.02),
+		2px 2px 4px rgba(3, 7, 18, 0.03),
+		4px 4px 9px rgba(3, 7, 18, 0.05),
+		6px 6px 15px rgba(3, 7, 18, 0.06),
+		10px 10px 24px rgba(3, 7, 18, 0.08);
+}
+
+[type='checkbox'],
+[type='radio'] {
+	@apply appearance-none bg-white bg-origin-border border-gray-500 border shrink-0 select-none align-middle p-0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+[type='checkbox']:checked {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 12'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M1 5.917 5.724 10.5 15 1.5'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 0.55em 0.55em;
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+}
+
+.dark [type='checkbox']:checked,
+.dark [type='radio']:checked,
+[type='checkbox']:checked,
+[type='radio']:checked {
+	@apply bg-current bg-[50%] bg-no-repeat bg-[length:0.55em_0.55em] border-transparent;
+}
